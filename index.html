@@ -1,141 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<! DOCTYPE html>
 <head>
-	<title>Web Portfolio: Index</title>
-	<LINK REL=StyleSheet HREF="mystyle.css" TYPE="text/css" MEDIA=screen>
-	<link rel="shortcut icon" href="images/favicon.png">
-	<script>
-	function updateTime() { 
-	
-    var now = new Date();
-    var hours = now.getHours();
-    var minutes = now.getMinutes();
-    var seconds = now.getSeconds();
-	
-	if (minutes < 10) { 
-    minutes = '0' + minutes;
-  }
-	if (seconds < 10) { 
-    seconds = '0' + seconds;
-  }				
-  
-	if (hours >= 12 && hours < 24) { 
-    var timeOfDay = 'pm';
-  }
-	else { 
-    var timeOfDay = 'am'; 
-  }
-				
-	if (hours > 12) { 
-    hours = hours - 12;
-  }
-
-    var currentTime = hours + ':' + minutes + ':' + seconds + ' ' + timeOfDay;    
-    
-    var myClock = document.getElementById('clock');
-    
-    myClock.innerHTML = currentTime;
-	
-  }
-  
-  function toggleClock() { 
-  
-    var myClock = document.getElementById('clock');
- 
-    var displaySetting = myClock.style.display;
-
-    var clockButton = document.getElementById('clockButton');
-				
-    if (displaySetting == 'block') { 
-
-      myClock.style.display = 'none';
-
-      clockButton.innerHTML = 'Show clock';
-    }
-    else { 
-
-      myClock.style.display = 'block';
-
-      clockButton.innerHTML = 'Hide clock';
-    }
-  }  
-
-	</script>
+	<title>Bordentown Baseball - Home</title>
+	<link rel=StyleSheet href="clientstyle.css" type="text/css" media=screen>
 </head>
-<body onload="setInterval('updateTime()',1000)">
-<div id="webportfolio">WEB PORTFOLIO<br/><div id="pagetitle">HOME</div></div>
-<div id="info">Dylan Wood | Junior | 19woodd@bordentown.k12.nj.us | Mrs. Ashish | Web Design Semester II</div>
-<div id="clock"></div> 
-<ul class="navbar">
-<li><a href="index.html" class="active" id="lefttab">Home</a></li>
-<li><a href="accessibility.html">Accessibility</a></li>
-<li><a href="graphics.html">Graphics</a></li>
-<li><a href="tools.html">Tools</a></li>
-<li><a href="usability.html">Usability</a></li>
-<li><a href="javascript.html">Javascript</a></li>
-<li><a href="video.html" id="righttab">Video</a></li>
-</ul>
-<div class="main">
-<div class="heading"><div class="head">OVERVIEW</div><p class="overview">This portfolio includes my work in Mrs. Ashish's Web 
-Design class and my reflection for each unit.</p></div>
-<div class="unit">UNIT 2 - CREATING WEB PAGES WITH HTML</div>
-<ul class="modules">
-<li class="mod">Module 1: Pre-Coding</li>
-<li class="mod">Module 2: Basic HTML Markup</li>
-<li class="mod">Module 3: HTML Lists</li>
-<li class="mod">Module 4: Creating Links</li>
-<li class="mod">Module 5: Creating a Data Table</li>
-<li class="mod">Module 6: HTML Video</li>
-<li class="mod">Module 7: Reflections</li>
-</ul>
-<p class="reflection"> In Unit Two, we learned the fundamentals of HTML (Hypertext Markup Language). HTML is the language that 
-supplies the information available on a web page. By learning the principles of HTML, we are laying the foundation to be able 
-to create more complex web pages in order to one day publish as a completed website.</p>
-<div class="unit">UNIT 3 - FORMATTING WEB PAGES WITH STYLE SHEETS</div>
-<ul class="modules">
-<li class="mod">Module 1: Introduction to Cascading Style Sheets</li>
-<li class="mod">Module 2: Color in CSS</li>
-<li class="mod">Module 3: Typography in CSS</li>
-<li class="mod">Module 4: The Box Model in CSS</li>
-<li class="mod">Module 5: The Role of ID and Class in CSS</li>
-<li class="mod">Module 6: Page Layout Techniques</li>
-<li class="mod">Module 7: Reflections</li>
-</ul>
-<p class="reflection"> In addition to HTML, we also learned how to apply CSS (Cascading Style Sheets). CSS is the language 
-that alters the appearance of the content on a web page. By using CSS, we are able to change elements including: font size, 
-background color, font families, and margins. Additionally, we can use CSS to alter the positions of elements
-on the page, as well as change their height and width.</p>
-<div class="unit">UNIT 4 - WEB GRAPHICS</div>
-<ul class="modules">
-<li class="mod">Module 1: Introduction to Web Graphics<ul class="submodules"><li class="mod">Introduction to Web Graphics</li><li class="mod">Copyright Law and Graphics on the Web</li></ul></li>
-<li class="mod">Module 2: Creating a Web Photo Album<ul class="submodules"><li class="mod">Understanding Web Graphics</li><li class="mod">Acquiring Images for Web graphics</li><li class="mod">Cropping and Resizing</li><li class="mod">Adding Images to your Web Page</ul></li>
-<li class="mod">Module 3: Creating a Button<ul class="submodules"><li class="mod">Basic Shapes and Colors</li><li class="mod">Working with Layers</li><li class="mod">Optimizing Gif Images</li><li class="mod">Creating a Favicon</li></ul></li>
-<li class="mod">Module 4: Creating a Web Page Banner<ul class="submodules"><li class="mod">Selection Tools</li><li class="mod">Layer Effects and Blending</li><li class="mod">Background Images</li></ul></li>
-<li class="mod">Module 5: Reflections<ul class="submodules"><li class="mod">Introduction to Web Graphics</li><li class="mod">Copyright Law and Graphics on the Web</li></ul></li>
-</ul>
-<p class="reflection">In Unit 4, we were introduced to the basics of using web graphics on our site. We learned about copyright restrictions
-on the web, how to give credit to the owner/originator of the image, and the different types of copyright that can be applied to an online
-image. In addition, we learned how to create a photo album on our site by resizing our images. We also used Photoshop and/or Microsoft Paint 3D
-to design and implement a button and web page banner onto our website. </p>
-<div class="unit">UNIT FIVE</div>
-<p class="reflection">In Unit 5, we were introduced to JavaScript, using it to design some basic functions. We learned how 
-to write the code into the head portion of our page, using the script tag. We also learned how to write variables in order 
-to assign values to pieces of code. Using these variables, we were able to create a simple button using the showAlert function, 
-as well as a clock that we can put on our home screen. Overall, JavaScript will be a useful tool for adding more detailed
-functionality into our web sites in the future.</p>
-<div class="unit">UNIT SIX</div>
-<p class="reflection">In Unit 6, we developed our skills in understanding how to better create a web page by studying and analyzing 
-and testing the validation and usability of our sites and others. We learned how to use online HTML validation resources to 
-identify potential errors in the code of our website, to use to improve the construction. In addition, we as a class formed 
-groups in which we tested each others' usability, identifying potential design errors in our pages. These could include graphics,
- text size and color, and the number of links and buttons, all elements that can be improved to create a superior site.</p>
-<div class="unit">UNIT SEVEN</div>
-<p class="reflection">In Unit 7, we learned the different ways to use web authoring software to create a page to be published on
- the web. We learned the difference between web authoring software and content management systems, or CMS, and used 
- this information to improve our own web sites. In addition, we learned how to publish our page to the web. To do this,
-  we used GitHub, an online publishing resource, and published our personal projects to the web for everyone to see.</p>
-<br/>
-<button onclick="toggleClock()" id="clockButton">Show clock</button>
-</div>
+<body> 
+	<ul>
+		<h1><a href="index.html">BORDENTOWN BASEBALL</a></h1>
+		<li><a href="clientnews.html">NEWS</a></li>
+		<li><a href="clientschedule.html">SCHEDULE</a></li>
+		<li><a href="clientstandings.html">STANDINGS</a></li>
+		<li><a href="clientteaminfo.html">TEAM INFO</a></li>
+		<li><a href="clientindex.html">HOME</a></li>
+	</ul>
+	<img src="teampic.jpg" id="teampic" alt="Team Picture"/>
+	<div id="main">
+		<h2>BORDENTOWN BASEBALL - HOME</h2>
+		<p><strong>Welcome to the Bordentown Baseball website!</strong> On this site, you 
+		will be able to find any and all information regarding the Bordentown Baseball 
+		team for the 2018 season. From team information, to the upcoming schedule, to 
+		the results of previous games, this is the go-to site for finding out anything you 
+		need to know about this team.</p>
+		<p><strong><a href="clientteaminfo.html">The Team Information Page</a></strong> will allow you to be able to find 
+		the roster of players, as well as coaches. Along with the names of the players 
+		and coaches, you will be able to find their numbers, as well as their graduation years. 
+		The Team Information page will also provide you with player statistics form the 
+		2018 baseball season.</p>
+		<p><strong><a href="clientstandings.html">The Standings Page</a></strong> will allow you to find out how the 
+		Bordentown Baseball team ranks compared to their competitors. Bordentown is in 
+		the Patriot Division for baseball, which includes such rivals as Delran and 
+		Holy Cross. Bordentown is in Central Jersey Group 2 when it comes to rankings for the 
+		Sectional Tournament, which occurs at the end of every season. This pits them 
+		against such teams as Governor Livingston, Voorhees, and Metuchen.</p>
+		<p><strong><a href="clientschedule.html">The Schedule Page</a></strong> will help you find information regarding 
+		upcoming games to be played by the Bordentown Baseball team. The team typically 
+		plays about 25 games in a season. Using this page, you will be able to see the date 
+		of the game, the start time of the game, the opponent to be played, the records of 
+		both the home and away teams, and the location of the game.</p>
+		<p><strong><a href="clientnews.html">The News Page</a></strong> will allow you to see all recent and past news 
+		regarding the Bordentown Baseball team. From reports on wins, to updates in the 
+		rankings and schedule of the team, to write-ups about players and performances, the 
+		News Page will give you the tools you need to stay up-to-date with the Bordentown 
+		Baseball team.</p>
+	</div>
 </body>
-</html>
