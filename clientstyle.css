@@ -63,13 +63,32 @@ li a:hover {
 	margin-right: 1em;
 	padding-bottom: 10em;
 	margin-bottom: 2em;
+	margin-top: 1em;
+}
+
+#clock {
+	font-size: 1em;
+	font-family: "Arial Black";
+	text-align: right;
+	margin-right: 1em;
+	padding-top: 1.25em;
+	line-height: .1em;	
+	margin-bottom: 0em;
+}
+
+#date {
+	font-size: 1em;
+	font-family: "Arial Black";
+	text-align: right;
+	margin-right: 1em;
+	padding-top: 1.25em;
+	line-height: .1em;	
 }
 
 h2 {
 	font-size: 3em;
 	font-family: "Arial Black";
 	margin-left: .75em;
-	padding-top: 1.5em;
 	line-height: .1em;
 }
 
@@ -184,4 +203,13 @@ td {
 
 .division {
 	font-family: "Arial Black";
+}
+
+.copyright {
+	color: #e4e5d7;
+	font-size: 1em;
+}
+
+a {
+	text-decoration: none;
 }

@@ -1,0 +1,79 @@
+<! DOCTYPE html>
+<html>
+<head>
+	<title>Bordentown Baseball - Home</title>
+	<link rel=StyleSheet href="clientstyle.css" type="text/css" media=screen>
+	<script>
+	function updateTime() { 
+	
+    var now = new Date();
+	var month = now.getMonth() + 1;
+	var day = now.getDate();
+	var year = now.getFullYear();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+	
+	if (minutes < 10) { 
+    minutes = '0' + minutes;
+  }		
+  
+	if (hours >= 12 && hours < 24) { 
+    var timeOfDay = 'pm';
+  }
+	else { 
+    var timeOfDay = 'am'; 
+  }
+				
+	if (hours > 12) { 
+    hours = hours - 12;
+  }
+	
+    var currentTime = hours + ':' + minutes + timeOfDay;    
+    var date = month + "/" + day + "/" + year;
+	
+	var myDate = document.getElementById('date');
+    var myClock = document.getElementById('clock');
+    
+    myClock.innerHTML = currentTime;
+	myDate.innerHTML = date;
+ 
+  }  
+
+	</script>
+</head>
+<body onload="setInterval('updateTime()',1000)"> 
+	<ul>
+		<h1><a href="index.html">BORDENTOWN BASEBALL</a></h1>
+		<li><a href="clientnews.html">NEWS</a></li>
+		<li><a href="clientschedule.html">SCHEDULE</a></li>
+		<li><a href="clientstandings.html">STANDINGS</a></li>
+		<li><a href="clientteaminfo.html">TEAM INFO</a></li>
+		<li><a href="index.html">HOME</a></li>
+	</ul>
+	<img src="teampic.jpg" id="teampic" alt="Team Picture"/>
+	<div id="main">
+		<div id="date"></div>
+		<div id="clock"></div>
+		<h2>SCORE - MAY 11</h2>
+		<hr/>
+		<table>
+			<tr>
+				<td class="team"><h3>6</h3><br/>NEW EGYPT</td>
+				<td class="vs">vs</td>
+				<td class="team"><h3>7</h3><br/>BORDENTOWN</td>
+			</tr>
+		</table>
+		<br/>
+		<p>A walk-off home run propelled Bordentown Scotties to a decisive, dramatic victory over New Egypt, 7-6. The game was tied at six with Bordentown Scotties batting in the bottom of the ninth when Chris Wade hit a solo homer.
+Both pitching staffs had their hands full, frequently dealing with runners on base. Bordentown Scotties collected ten hits and New Egypt had nine.
+New Egypt got things moving in the first inning. N Flogel drove in two when he singled.
+Bordentown Scotties evened things up at six in the bottom of the seventh inning. Kyle Marchetti's sac fly scored two runs for Bordentown Scotties.
+Steve Ryba was credited with the victory for Bordentown Scotties . He lasted three innings, allowing three hits and two runs while striking out four and walking one.
+C Fernicola took the loss for New Egypt. He went eight and a third innings, allowing seven runs on ten hits, striking out one and walking zero.
+Tom Niedermaier started the game for Bordentown Scotties . He surrendered four runs on six hits over six innings, striking out four
+Bordentown Scotties launched two home runs on the day. Jack Parker went yard in the fifth inning. Wade had a four bagger in the ninth inning.
+Bordentown Scotties had ten hits in the game. Parker, Dillon Drew, and Wade all managed multiple hits for Bordentown Scotties . Wade, Drew, and Parker each managed two hits to lead Bordentown Scotties .
+New Egypt racked up nine hits in the game. Flogel and R Steen all collected multiple hits for New Egypt. Flogel led New Egypt with three hits in four at bats. New Egypt was sure-handed in the field and didn't commit a single error. A Desantis had the most chances in the field with 11.</p>
+	</div>
+</body>
+</html>

@@ -3,8 +3,45 @@
 <head>
 	<title>Bordentown Baseball - Home</title>
 	<link rel=StyleSheet href="clientstyle.css" type="text/css" media=screen>
+	<script>
+	function updateTime() { 
+	
+    var now = new Date();
+	var month = now.getMonth() + 1;
+	var day = now.getDate();
+	var year = now.getFullYear();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+	
+	if (minutes < 10) { 
+    minutes = '0' + minutes;
+  }		
+  
+	if (hours >= 12 && hours < 24) { 
+    var timeOfDay = 'pm';
+  }
+	else { 
+    var timeOfDay = 'am'; 
+  }
+				
+	if (hours > 12) { 
+    hours = hours - 12;
+  }
+	
+    var currentTime = hours + ':' + minutes + timeOfDay;    
+    var date = month + "/" + day + "/" + year;
+	
+	var myDate = document.getElementById('date');
+    var myClock = document.getElementById('clock');
+    
+    myClock.innerHTML = currentTime;
+	myDate.innerHTML = date;
+ 
+  }  
+
+	</script>
 </head>
-<body> 
+<body onload="setInterval('updateTime()',1000)"> 
 	<ul>
 		<h1><a href="index.html">BORDENTOWN BASEBALL</a></h1>
 		<li><a href="clientnews.html">NEWS</a></li>
@@ -15,6 +52,8 @@
 	</ul>
 	<img src="teampic.jpg" id="teampic" alt="Team Picture"/>
 	<div id="main">
+		<div id="date"></div>
+		<div id="clock"></div>
 		<h2>STANDINGS</h2>
 		<hr/>
 		<table>
@@ -27,28 +66,28 @@
 				<th>Division</th>
 			</tr>
 			<tr>
-				<td>Delran</td>
-				<td>17-5</td>
-				<td>6-1</td>
+				<td>Bordentown</td>
+				<td>17-6</td>
+				<td>6-2</td>
 			</tr>
 			<tr>
-				<td>Bordentown</td>
-				<td>17-5</td>
+				<td>Delran</td>
+				<td>18-5</td>
 				<td>6-2</td>
 			</tr>
 			<tr>
 				<td>Holy Cross</td>
-				<td>10-10</td>
-				<td>5-2</td>
+				<td>15-8</td>
+				<td>6-2</td>
 			</tr>
 			<tr>
 				<td>Cinnaminson</td>
-				<td>10-10</td>
-				<td>3-3</td>
+				<td>9-15</td>
+				<td>2-6</td>
 			</tr>
 			<tr>
 				<td>Pemberton</td>
-				<td>5-15</td>
+				<td>3-17</td>
 				<td>0-8</td>
 			</tr>
 		</table>

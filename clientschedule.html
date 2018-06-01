@@ -3,8 +3,45 @@
 <head>
 	<title>Bordentown Baseball - Home</title>
 	<link rel=StyleSheet href="clientstyle.css" type="text/css" media=screen>
+	<script>
+	function updateTime() { 
+	
+    var now = new Date();
+	var month = now.getMonth() + 1;
+	var day = now.getDate();
+	var year = now.getFullYear();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+	
+	if (minutes < 10) { 
+    minutes = '0' + minutes;
+  }		
+  
+	if (hours >= 12 && hours < 24) { 
+    var timeOfDay = 'pm';
+  }
+	else { 
+    var timeOfDay = 'am'; 
+  }
+				
+	if (hours > 12) { 
+    hours = hours - 12;
+  }
+	
+    var currentTime = hours + ':' + minutes + timeOfDay;    
+    var date = month + "/" + day + "/" + year;
+	
+	var myDate = document.getElementById('date');
+    var myClock = document.getElementById('clock');
+    
+    myClock.innerHTML = currentTime;
+	myDate.innerHTML = date;
+ 
+  }  
+
+	</script>
 </head>
-<body> 
+<body onload="setInterval('updateTime()',1000)"> 
 	<ul>
 		<h1><a href="index.html">BORDENTOWN BASEBALL</a></h1>
 		<li><a href="clientnews.html">NEWS</a></li>
@@ -15,9 +52,12 @@
 	</ul>
 	<img src="teampic.jpg" id="teampic" alt="Team Picture"/>
 	<div id="main">
+		<div id="date"></div>
+		<div id="clock"></div>
 		<h2>SCHEDULE</h2>
 		<hr/>
-		<table>
+		<p>Click the game to find out scores and results.</p>
+		<a href="clientscores524.html"><table>
 			<tr>
 				<caption class="date">MAY 24</caption>
 			</tr>
@@ -28,10 +68,10 @@
 				<td class="team"><img src="http://coachesaid.com/Content/Mascots/nj-njbrhs-letter-150.png" 
 				class="teamlogo" alt="Bordentown Logo"/><br/>BORDENTOWN</td>
 			</tr>
-		</table>
+		</table></a>
 		<br/>
 		<br/>
-		<table>
+		<a href="clientscores521.html"><table>
 			<tr>
 				<caption class="date">MAY 21</caption>
 			</tr>
@@ -42,10 +82,10 @@
 				<td class="team"><img src="http://coachesaid.com/Content/Mascots/nj-njbrhs-letter-150.png" 
 				class="teamlogo" alt="Bordentown Logo"/><br/>BORDENTOWN</td>
 			</tr>
-		</table>
+		</table></a>
 		<br/>
 		<br/>
-		<table>
+		<a href="clientscores512.html"><table>
 			<tr>
 				<caption class="date">MAY 12</caption>
 			</tr>
@@ -56,10 +96,10 @@
 				<td class="team"><img src="http://coachesaid.com/Content/Mascots/nj-njbrhs-letter-150.png" 
 				class="teamlogo" alt="Bordentown Logo"/><br/>BORDENTOWN</td>
 			</tr>
-		</table>
+		</table></a>
 		<br/>
 		<br/>
-		<table>
+		<a href="clientscores511.html"><table>
 			<tr>
 				<caption class="date">MAY 11</caption>
 			</tr>
@@ -70,10 +110,10 @@
 				<td class="team"><img src="http://coachesaid.com/Content/Mascots/nj-njbrhs-letter-150.png" 
 				class="teamlogo" alt="Bordentown Logo"/><br/>BORDENTOWN</td>
 			</tr>
-		</table>
+		</table></a>
 		<br/>
 		<br/>
-		<table>
+		<a href="clientscores510.html"><table>
 			<tr>
 				<caption class="date">MAY 10</caption>
 			</tr>
@@ -84,7 +124,7 @@
 				<td class="team"><img src="https://static.hudl.com/users/temp/7746101_e445c930ae7f43f194d7b12960334ac1.jpg" 
 				class="teamlogo" alt="Delran Logo"/><br/>DELRAN</td>
 			</tr>
-		</table>
+		</table></a>
 	</div>
 </body>
 </html>
